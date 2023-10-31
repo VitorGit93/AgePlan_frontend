@@ -1,4 +1,37 @@
-#cartao {
-  height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.ion-no-border {
+
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-top: 30px solid var(--fundoMain, #3A6EA5);
+  height: 160px;
+
+  div {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+  }
+
+}
+
+.ion-padding {
+  padding: 15px;
+  background-color: var(--fundoMain, #3A6EA5);
+}
+
+.ion-padding-grid {
+  padding: 15px;
 }
