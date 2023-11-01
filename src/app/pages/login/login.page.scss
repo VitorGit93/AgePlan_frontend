@@ -1,36 +1,37 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+ion-header {
+  margin-top: 30px solid var(--fundoMain, #da110a);
+  background-color: var(--fundoMain, #21f54f);
 
-}
-
-.ion-no-border {
-
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  border-top: 30px solid var(--fundoMain, #3A6EA5);
-  height: 160px;
+  .div-header {
+    height: 30px;
+    background: var(--fundoMain, #3A6EA5);
+  }
 
   div {
-    display: block;
-    margin: 0 auto;
-    width: 100px;
-    align-items: center;
+    background: var(--fundoSubMain, #2B619A);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    height: 182px;
+
+    ion-img {
+      margin-top: 1%;
+    }
+
+    ion-title {
+      text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
 
   }
 
 }
 
-.ion-padding {
-  padding: 15px;
-  background-color: var(--fundoMain, #3A6EA5);
-}
 
 .ion-padding-grid {
   padding: 15px;
