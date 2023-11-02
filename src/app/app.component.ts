@@ -10,6 +10,6 @@ export class AppComponent {
     { title: 'Home', url: '/home', icon: 'home' },
     { title: 'Cadastro', url: '/cadastro', icon: 'add-circle' },
   ];
-  
+
   constructor() {}
 }
