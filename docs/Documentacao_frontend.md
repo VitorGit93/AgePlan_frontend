@@ -1,20 +1,10 @@
-# This is a h1 heading
+# Este documento contém a documentação do frontend do projeto.
 
-This is normal text.
+## Sumário
 
-Paragraphs are separated with two newlines.
+- [Este documento contém a documentação do frontend do projeto.](#este-documento-contém-a-documentação-do-frontend-do-projeto)
+  - [Sumário](#sumário)
+  - [Introdução](#introdução)
 
-1. This is an ordered list.
-2. There are two items on this list.
-
-- This is an unordered list.
-- There are also two items on this list.
-
-```
-This is a code block
-with multiple lines
-```
-
-Supported markdown syntax can be found on the guide bar.
-
+## Introdução
 
