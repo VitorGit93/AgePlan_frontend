@@ -1,5 +1,7 @@
 {
-  "name": "ionic-app-base",
-  "integrations": {},
+  "name": "AgePlan_frontend",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
