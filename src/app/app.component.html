@@ -2,26 +2,116 @@
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
-        <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi@ionicframework.com</ion-note>
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+        <ion-list id="my-side-menu-list">
+
+          <!--
+            Aqui pode haver um ion-card como cabeçalho do side-menu.
+          -->
+
+          <ion-card
+            id="my-side-menu-card"
+            style="
+              --background: url('assets/imgs/background.jpg') no-repeat center center / cover;
+              --background-opacity: 0.8;
+            "
+          >
+            <ion-card-header>
+              <ion-card-title>Olá, Usuário</ion-card-title>
+              <ion-card-subtitle>Admin</ion-card-subtitle>
+            </ion-card-header>
+
+            <ion-card-content>
+
+            </ion-card-content>
+          </ion-card>
+
+
+
+          <ion-menu-toggle
+            auto-hide="false"
+            *ngFor="let p of appPages; let i = index"
+            >
+            <!--
+              O ion-menu-toggle é um componente que permite que
+              o conteúdo dentro dele seja exibido ou ocultado.
+              Ele possui dois atributos:
+
+              - auto-hide: define se o menu deve ser ocultado
+              automaticamente quando o usuário navegar para uma
+              nova página. O valor padrão é true.
+
+              - *ngFor: é uma diretiva estrutural que permite
+              iterar sobre uma lista de itens. No caso, estamos
+              iterando sobre a lista de páginas do menu.
+            -->
+            <ion-item
+              routerDirection="root"
+              [routerLink]="[p.url]"
+              lines="none"
+              detail="false"
+              routerLinkActive="selected"
+            >
+            <!--
+              O ion-item é um componente que representa um item
+              de uma lista. Ele possui vários atributos:
+
+              - routerDirection: define a direção da animação
+              ao navegar para a página. O valor padrão é 'forward'.
+
+              - routerLink: define a rota para a qual o usuário
+              será redirecionado ao clicar no item.
+
+              - lines: define o estilo das linhas do item. O valor
+              padrão é 'full'.
+
+              - detail: define se o item deve exibir um ícone de
+              detalhes. O valor padrão é 'false'.
+
+              - routerLinkActive: define a classe CSS que será
+              aplicada ao item quando a rota definida em routerLink
+              estiver ativa.
+            -->
+              <ion-icon
+                aria-hidden="true"
+                slot="start"
+                [ios]="p.icon + '-outline'"
+                [md]="p.icon + '-sharp'"
+              ></ion-icon>
+
+              <!--
+                O ion-icon é um componente que representa um ícone.
+                Ele possui vários atributos:
+
+                - aria-hidden: define se o ícone deve ser visível
+                para leitores de tela. O valor padrão é 'true'.
+
+                - slot: define o slot no qual o ícone deve ser
+                exibido. O valor padrão é 'start'.
+
+                - [ios]: define o nome do ícone que será exibido
+                em dispositivos iOS. O valor padrão é o nome do
+                ícone seguido de '-outline'.
+
+                - [md]: define o nome do ícone que será exibido
+                em dispositivos Android. O valor padrão é o nome
+                do ícone seguido de '-sharp'.
+              -->
+
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
 
-        <ion-list id="labels-list">
+        <!-- <ion-list id="labels-list">
           <ion-list-header>Labels</ion-list-header>
 
           <ion-item *ngFor="let label of labels" lines="none">
             <ion-icon aria-hidden="true" slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
             <ion-label>{{ label }}</ion-label>
           </ion-item>
-        </ion-list>
+        </ion-list> -->
+
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
