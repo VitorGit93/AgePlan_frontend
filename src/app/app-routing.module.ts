@@ -38,7 +38,8 @@ const routes: Routes = [
   {
     path: 'meus-dados',
     loadChildren: () => import('./pages/mobile-view/system-mobile/meus-dados/meus-dados.module').then( m => m.MeusDadosPageModule)
-  },  {
+  },
+  {
     path: 'calendario-letivo',
     loadChildren: () => import('./pages/web-view/system-main/calendario-letivo/calendario-letivo.module').then( m => m.CalendarioLetivoPageModule)
   },
@@ -51,8 +52,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/web-view/system-main/curso/curso.module').then( m => m.CursoPageModule)
   },
   {
-    path: 'pagesweb-viewsystem-mainbiblioteca',
-    loadChildren: () => import('./pagesweb-viewsystem-mainbiblioteca/pagesweb-viewsystem-mainbiblioteca.module').then( m => m.PageswebViewsystemMainbibliotecaPageModule)
+    path: 'biblioteca',
+    loadChildren: () => import('./pages/web-view/system-main/biblioteca/biblioteca.module').then( m => m.BibliotecaPageModule)
   }
 
 ];

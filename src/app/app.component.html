@@ -3,58 +3,32 @@
     <ion-menu
       style="
         width: 50%;
-        background: #2b619a;
-        display: flex;
-        flex-direction: column;
+        --background: #2b619a;
         justify-content: flex-start;
         align-items: flex-start;
+        width: auto;
       "
       contentId="main-content" type="overlay">
-      <ion-content
-        style="
-          width: 50%;
 
+      <ion-content style="--background: #2b619a;">
 
-        "
-      >
-
-        <ion-card
-          id="my-side-menu-card"
-          style="
-            width: 100%;
-            margin: 0;
-            "
-          >
+        <ion-card id="my-side-menu-card" style="width: 100%; margin: 0;">
 
           <ion-label
             style="
-              background-color: #d35501;
+              background-color: #be4e02;
               display: flex;
               align-items: center;
               font-family: 'Roboto', sans-serif;
               font-size: 1.6rem;
-              padding: 10px 0 10px 15px;
+              padding: 10px 0 10px 26px;
               color: #fff;
-            "
-          >AgePlan
-            <ion-icon
-              style="padding-left: 10px;"
-            name="school-outline" slot="start"></ion-icon>
+            "> AgePlan <ion-icon style="padding-left: 10px;" name="school-outline" slot="start"></ion-icon>
           </ion-label>
 
-
-          <ion-item
-            class="teste"
-            style="
-              width: 100%;
-              --background: #d35501;
-              padding: 0;
-            "
-              >
-            <ion-avatar
-              slot="start"
+          <ion-item style="--background: #FF6700; padding: 0;">
+            <ion-avatar slot="start"
               style="
-                border: solid 1px #fff;
                 margin: 10px;
                 display: flex;
                 flex-direction: row;
@@ -71,99 +45,96 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: flex-start;
-              "
-              >
-
-              <ion-card-title>Olá, Usuário</ion-card-title>
-              <ion-card-subtitle>Admin</ion-card-subtitle>
+              ">
+              <ion-card-title
+                style="font-family: 'Roboto', sans-serif; font-size: 1.2rem; color: #fff;">
+                Olá, Usuário
+              </ion-card-title>
+              <ion-card-subtitle
+                style="
+                  font-family: 'Roboto', sans-serif;
+                  font-size: 1rem;
+                  color: #fff;
+                "> Admin
+              </ion-card-subtitle>
             </ion-card-header>
           </ion-item>
 
-
         </ion-card>
 
-
-        <ion-list
+        <ion-list id="my-side-menu-list"
           style="
-            width: 100%;
-            background: #2b619a;
+            --background: #2b619a;
             padding: 0;
-            margin: 0;
+            margin: 15px 0 5px 5px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
-          "
-          id="my-side-menu-list">
+          ">
 
+          <ion-menu-toggle auto-hide="false"
+            style="width: 100%; --background: #2b619a; padding: 0; display: flex;">
 
+            <ion-accordion-group id="my-accordion-group" multiple="true" style="width: 100%; --background: #2b619a;">
 
-          <ion-menu-toggle auto-hide="false">
+              <ion-item class="my-menu-item" lines="none" routerDirection="root" [routerLink]="[pageInicio.url]" routerLinkActive="selected"
+                style="width: 100%; --background: #2b619a;">
+                <ion-icon name="home-outline" slot="start"></ion-icon>
+                <ion-label>{{pageInicio.title}}</ion-label>
+              </ion-item>
 
-            <ion-item class="my-menu-item" lines="none" routerDirection="root" [routerLink]="[pageInicio.url]" routerLinkActive="selected">
-              <ion-icon name="home-outline" slot="start"></ion-icon>
-              <ion-label>{{pageInicio.title}}</ion-label>
-            </ion-item>
+                <ion-accordion style="--background: #3b76b6;" class="accordion-gerenciar" value="gerenciar" toggleIcon="chevron-down-outline">
 
-            <ion-accordion-group
-              class="my-group"
-            multiple="true">
+                  <ion-item style="width: 100%; --background: #2b619a;" class="my-menu-item" slot="header" lines="none" routerLinkActive="selected">
+                    <ion-icon name="settings-outline" slot="start"></ion-icon>
+                    <ion-label> Gerenciar </ion-label>
+                  </ion-item>
 
-              <ion-accordion class="accordion-gerenciar" value="gerenciar" toggleIcon="chevron-down-outline">
+                  <ion-item class="my-menu-item" lines="none" routerDirection="root" [routerLink]="[pageCadastro.url]" slot="content" button
+                    style="width: 100%; --background: #3b76b6; border-left: 10px solid #3b76b6;">
+                    <ion-icon name="person-add-outline" slot="start"></ion-icon>
+                    {{pageCadastro.title}}
+                  </ion-item>
 
-                <!--
-                  Aqui está o item que será o cabeçalho do accordion.
-                -->
-                <ion-item
-                  style="background: #2b619a;"
-                class="my-menu-item" slot="header" lines="none" routerLinkActive="selected">
-                  <ion-icon name="settings-outline" slot="start"></ion-icon>
-                  <ion-label>Gerenciar</ion-label>
-                </ion-item>
+                  <ion-item class="my-menu-item" lines="none" routerDirection="root" [routerLink]="[pageEstudante.url]" slot="content" button
+                    style="width: 100%; border-left: 10px solid #3b76b6; --background: #3b76b6;">
+                    <ion-icon name="person-outline" slot="start"></ion-icon>
+                    {{pageEstudante.title}}
+                  </ion-item>
 
-                <!--
-                  Aqui estão os itens que serão exibidos quando o accordion estiver aberto.
-                -->
+                  <ion-item class="my-menu-item" lines="none" routerDirection="root" [routerLink]="[pageCurso.url]" slot="content" button
+                    style="width: 100%; border-left: 10px solid #3b76b6; --background: #3b76b6;">
+                    <ion-icon name="school-outline" slot="start"></ion-icon>
+                    {{pageCurso.title}}
+                  </ion-item>
 
-                <ion-item class="my-menu-item" lines="none" routerDirection="root" [routerLink]="[pageCadastro.url]" slot="content" button>
-                  <ion-icon name="person-add-outline" slot="start"></ion-icon>
-                  {{pageCadastro.title}}
-                </ion-item>
+                  <ion-item class="my-menu-item" lines="none" routerDirection="root" [routerLink]="[pageBiblioteca.url]" slot="content" button
+                    style="width: 100%; border-left: 10px solid #3b76b6; --background: #3b76b6;">
+                    <ion-icon name="book-outline" slot="start"></ion-icon>
+                    {{pageBiblioteca.title}}
+                  </ion-item>
 
-                <ion-item class="my-menu-item" lines="none" routerDirection="root" [routerLink]="[pageEstudante.url]" slot="content" button>
-                  <ion-icon name="person-outline" slot="start"></ion-icon>
-                  {{pageEstudante.title}}
-                </ion-item>
+                </ion-accordion>
 
-                <ion-item class="my-menu-item" lines="none" routerDirection="root" [routerLink]="[pageCurso.url]" slot="content" button>
-                  <ion-icon name="school-outline" slot="start"></ion-icon>
-                  {{pageCurso.title}}
-                </ion-item>
-
-                <!--
-                  Aqui está o componente da biblioteca.
-                -->
-
-                <ion-item class="my-menu-item" lines="none" routerDirection="root" [routerLink]="[pageBiblioteca.url]" slot="content" button>
-                  <ion-icon name="book-outline" slot="start"></ion-icon>
-                  {{pageBiblioteca.title}}
-                </ion-item>
-
-              </ion-accordion>
-
-              <ion-item lines="none" routerDirection="root" [routerLink]="[pageCalendarioLetivo.url]"
-                routerLinkActive="selected">
+              <ion-item lines="none" routerDirection="root" [routerLink]="[pageCalendarioLetivo.url]" routerLinkActive="selected"
+                style="width: 100%;--background: #2b619a;">
                 <ion-icon name="calendar-outline" slot="start"></ion-icon>
                 {{pageCalendarioLetivo.title}}
               </ion-item>
 
-              <ion-item lines="none" routerDirection="root" [routerLink]="[pageRelatorios.url]"
-                routerLinkActive="selected">
+              <!--
+                Para fazer com que o item mude de cor ao ser selecionado, no css do componente, adicionei a classe .selected.
+              -->
+
+              <ion-item lines="none" routerDirection="root" [routerLink]="[pageRelatorios.url]" routerLinkActive="selected"
+                style="width: 100%;--background: #2b619a;">
                 <ion-icon name="document-text-outline" slot="start"></ion-icon>
                 {{pageRelatorios.title}}
               </ion-item>
 
             </ion-accordion-group>
+
 
           </ion-menu-toggle>
         </ion-list>
