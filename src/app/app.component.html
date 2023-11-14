@@ -1,37 +1,101 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
-      <ion-content>
+    <ion-menu
+      style="
+        width: 50%;
+        background: #2b619a;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      "
+      contentId="main-content" type="overlay">
+      <ion-content
+        style="
+          width: 50%;
 
-        <ion-list id="my-side-menu-list">
 
-          <ion-card id="my-side-menu-card">
+        "
+      >
 
-            <ion-item
-              class="avatar-left"
-              style="border: solid 1px #fff; border-radius: 10px;
-                     padding: 0;
-                     margin: 0; display: flex; flex-direction: row; justify-content: flex-start; align-items: center;"
-            >
-              <ion-avatar
-                slot="start"
-                style="border: solid 1px #fff; margin: 10px; display: flex; flex-direction: row; justify-content: center; align-items: center"
+        <ion-card
+          id="my-side-menu-card"
+          style="
+            width: 100%;
+            margin: 0;
+            "
+          >
+
+          <ion-label
+            style="
+              background-color: #d35501;
+              display: flex;
+              align-items: center;
+              font-family: 'Roboto', sans-serif;
+              font-size: 1.6rem;
+              padding: 10px 0 10px 15px;
+              color: #fff;
+            "
+          >AgePlan
+            <ion-icon
+              style="padding-left: 10px;"
+            name="school-outline" slot="start"></ion-icon>
+          </ion-label>
+
+
+          <ion-item
+            class="teste"
+            style="
+              width: 100%;
+              --background: #d35501;
+              padding: 0;
+            "
               >
-                <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-              </ion-avatar>
-              <ion-card-header
-                style="border: solid 1px #fff; border-radius: 10px;
-                       padding: 0;
-                       margin: 5px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;"
-              >
-                <ion-card-title>Olá, Usuário</ion-card-title>
-                <ion-card-subtitle>Admin</ion-card-subtitle>
-              </ion-card-header>
-            </ion-item>
+            <ion-avatar
+              slot="start"
+              style="
+                border: solid 1px #fff;
+                margin: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center">
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
 
-            <ion-card-content>
-            </ion-card-content>
-          </ion-card>
+            <ion-card-header
+              style="
+                padding: 2px;
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+              "
+              >
+
+              <ion-card-title>Olá, Usuário</ion-card-title>
+              <ion-card-subtitle>Admin</ion-card-subtitle>
+            </ion-card-header>
+          </ion-item>
+
+
+        </ion-card>
+
+
+        <ion-list
+          style="
+            width: 100%;
+            background: #2b619a;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+          "
+          id="my-side-menu-list">
+
 
 
           <ion-menu-toggle auto-hide="false">
@@ -77,8 +141,13 @@
                 </ion-item>
 
                 <!--
-                  Aqui finaliza o accordion e os itens que estão dentro dele.
+                  Aqui está o componente da biblioteca.
                 -->
+
+                <ion-item class="my-menu-item" lines="none" routerDirection="root" [routerLink]="[pageBiblioteca.url]" slot="content" button>
+                  <ion-icon name="book-outline" slot="start"></ion-icon>
+                  {{pageBiblioteca.title}}
+                </ion-item>
 
               </ion-accordion>
 

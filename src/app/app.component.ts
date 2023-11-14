@@ -12,6 +12,7 @@ export class AppComponent {
   public pageCurso = { title: 'Curso', url: '/curso', icon: 'school' };
   public pageCalendarioLetivo = { title: 'Calendário Letivo', url: '/calendario-letivo', icon: 'calendar' };
   public pageRelatorios = { title: 'Relatórios', url: '/relatorios', icon: 'document' };
+  public pageBiblioteca = { title: 'Biblioteca', url: '/biblioteca', icon: 'book' };
 
   constructor() {}
 }

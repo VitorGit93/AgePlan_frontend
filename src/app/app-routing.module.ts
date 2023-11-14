@@ -49,6 +49,10 @@ const routes: Routes = [
   {
     path: 'curso',
     loadChildren: () => import('./pages/web-view/system-main/curso/curso.module').then( m => m.CursoPageModule)
+  },
+  {
+    path: 'pagesweb-viewsystem-mainbiblioteca',
+    loadChildren: () => import('./pagesweb-viewsystem-mainbiblioteca/pagesweb-viewsystem-mainbiblioteca.module').then( m => m.PageswebViewsystemMainbibliotecaPageModule)
   }
 
 ];
