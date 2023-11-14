@@ -1,0 +1,17 @@
+import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+import { CursoPage } from './curso.page';
+
+describe('CursoPage', () => {
+  let component: CursoPage;
+  let fixture: ComponentFixture<CursoPage>;
+
+  beforeEach(async(() => {
+    fixture = TestBed.createComponent(CursoPage);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  }));
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

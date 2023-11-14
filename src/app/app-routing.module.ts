@@ -38,7 +38,19 @@ const routes: Routes = [
   {
     path: 'meus-dados',
     loadChildren: () => import('./pages/mobile-view/system-mobile/meus-dados/meus-dados.module').then( m => m.MeusDadosPageModule)
+  },  {
+    path: 'calendario-letivo',
+    loadChildren: () => import('./pages/web-view/system-main/calendario-letivo/calendario-letivo.module').then( m => m.CalendarioLetivoPageModule)
+  },
+  {
+    path: 'estudante',
+    loadChildren: () => import('./pages/web-view/system-main/estudante/estudante.module').then( m => m.EstudantePageModule)
+  },
+  {
+    path: 'curso',
+    loadChildren: () => import('./pages/web-view/system-main/curso/curso.module').then( m => m.CursoPageModule)
   }
+
 ];
 
 @NgModule({

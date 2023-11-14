@@ -1,62 +1,77 @@
-
 ion-menu {
   background-color: #73849a;
+
+  ion-content {
+    --background: #2b619a;
+    --padding-start: 8px;
+    --padding-end: 8px;
+    --padding-bottom: 20px;
+
+    ion-list#my-side-menu-list {
+      border-bottom: 1px solid #b7f5d6;
+      background-color: #2b619a;
+
+      ion-card#my-side-menu-card {
+        border: solid 1px #fff;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 0 0 20px 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+  }
 }
 
-ion-menu ion-content {
-  --background: #2B619A;
-  --padding-start: 8px;
-  --padding-end: 8px;
-  --padding-bottom: 20px;
+ion-menu-toggle ion-item {
+  --background: #2b619a;
+  --padding-end: 20px;
+  border-radius: 20px;
+}
+
+.accordion-gerenciar {
+  --background: #2b619a;
+
+}
+
+.my-group {
+  --background: #2b619a;
 }
 
 
-ion-menu.md ion-list-header,
-ion-menu.md ion-note {
-  padding-left: 10px;
-}
 
-ion-menu.md ion-list#my-side-menu-list {
-  border-bottom: 1px solid var(--ion-color-step-150, #d7d8da);
-}
-
-ion-menu.md ion-list#my-side-menu-list ion-list-header {
-  font-size: 22px;
-  font-weight: 600;
-
-  min-height: 20px;
-}
-
-ion-menu.md ion-list#labels-list ion-list-header {
-  font-size: 16px;
-
-  margin-bottom: 18px;
-
-  color: #757575;
-
-  min-height: 26px;
-}
-
-ion-menu.md ion-item {
-  --padding-start: 10px;
-  --padding-end: 10px;
-  border-radius: 4px;
-}
-
-ion-menu.md ion-item.selected {
+/* Estilo para os itens com a classe 'my-menu-item' quando são selecionados */
+ion-item.my-menu-item.selected {
   --background: rgba(var(--ion-color-primary-rgb), 0.14);
+  ion-icon {
+    color: var(--ion-color-primary);
+  }
 }
 
-ion-menu.md ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
+/* Estilo para o cabeçalho do accordion quando é selecionado */
+ion-accordion.selected {
+  --background: rgba(var(--ion-color-primary-rgb), 0.14);
+  ion-icon {
+    color: var(--ion-color-primary);
+  }
 }
 
-ion-menu.md ion-item ion-icon {
-  color: #616e7e;
+/* Estilo para os itens dentro do accordion quando o accordion está aberto e o item é selecionado */
+ion-accordion.selected ion-item.my-menu-item {
+  --background: rgba(var(--ion-color-primary-rgb), 0.14);
+  ion-icon {
+    color: var(--ion-color-primary);
+  }
 }
 
-ion-menu.md ion-item ion-label {
-  font-weight: 500;
+
+
+
+
+
+ion-menu ion-item ion-icon {
+  color: #f00000;
 }
 
 ion-menu.ios ion-content {
@@ -104,7 +119,6 @@ ion-menu.ios ion-note {
 ion-note {
   display: inline-block;
   font-size: 16px;
-
   color: var(--ion-color-medium-shade);
 }
 
