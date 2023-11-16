@@ -1,115 +1,148 @@
-<ion-header [translucent]="true"
-style="
-background: #2B619A;
-padding: 0;
-margin: 0;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width: 100%;
-border-top: 25px solid #3A6EA5;
-"
->
-  <div
-  style="
-    background: #2b619a;
+<ion-header [translucent]="true" style="
+  background: linear-gradient(to right, #396afc, #2948ff);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top: 25px solid;
+  border-image: linear-gradient(to right, #FF6700, #ed8f03) 1;
+  ">
+  <div style="
+
     padding: 0;
     margin: 18px 0 15px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  "
-  >
-
-<ion-img
-src="assets\logo\middle-school-education-icon-school-icon-with-circle.png"
-style="
-width: 60px;
-margin: 5px 0 5px 0;
-
-"
-/>
-<ion-title
-style="
-font-size: 2.8rem;
---background: #2b619a;
-padding: 0;
-margin: 5px 0 0 0;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-"
->AgePlan</ion-title>
-</div>
+  ">
+    <ion-img src="assets/logo/logoAgePlan.svg" style="position: relative; width: 80px;" />
+    <ion-title style="font-size: 1.9rem; padding: 0; margin: 5px 0 0 0;"> AgePlan </ion-title>
+  </div>
 </ion-header>
 
-<ion-content
-  style="
-    --background: #3A6EA5;
-    padding: auto;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+<ion-content style="--background: linear-gradient(to right, #bad8ff, #ffffff);">
 
-  "
->
-  <form
+  <div
     style="
-    --background: #3A6EA5;
-    box-sizing: border-box;
-    padding: auto;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-
-    "
-    #form="ngForm" >
-    <ion-grid
-      style="
-      --background: #3A6EA5;
+      display: flex;
+      position: relative;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 100%;
-      "
-    >
-      <ion-row color="primary"
-        style="
-        --background: #3A6EA5;
+      height: fit-content;
+    ">
+
+  <div
+    style="
+      background: linear-gradient(to right, #396afc, #2948ff);
+      position: relative;
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 324px;
+      height: fit-content;
+      border-radius: 8px;
+      box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.6);
+    ">
+
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: 296px;
+      "
+    >
+
+      <ion-title
+        style="
+          font-size: 1.5rem;
+          font-weight: 400;
+          color: #fff;
+          padding: 5px;
+          margin: 18px 0 16px 0;
+        "
+      > Login </ion-title>
+
+      <form
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
         "
       >
-        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-          <div text-center>
-            <h3>Login</h3>
-          </div>
-          <div padding>
-            <ion-item>
-              <ion-input name="name" type="text" placeholder="Name" ngModel required></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-input name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-input name="confirm" type="password" placeholder="Password again" ngModel required></ion-input>
-            </ion-item>
-          </div>
-          <div padding>
-            <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block">Register</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </form>
+        <ion-item
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 14px 12px 14px;
+            --background: linear-gradient(to left, #bad8ff, #ffffffd2);
+            border-radius: 8px;
+            width: 296px;
+            height: 48px;
+            color: rgba(59, 55, 80, 0.781);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            --inner-border-width: 0;
+          "
+        >
+          <ion-input type="email" placeholder="Nome de usuário ou e-mail" required/>
+        </ion-item>
+
+        <ion-item
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 14px 8px 14px;
+            --background: linear-gradient(to left, #bad8ff, #ffffffd2);
+            border-radius: 8px;
+            width: 296px;
+            height: 48px;
+            color: rgba(59, 55, 80, 0.781);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            --inner-border-width: 0;
+          "
+        >
+          <ion-input type="password" placeholder="Sua senha" required />
+        </ion-item>
+      </form>
+    </div>
+
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 16px;
+        width: 296px;
+      "
+    >
+
+      <ion-text style="padding-left: 4px;padding-bottom: 8px;">
+        <ion-router-link routerLink="/recuperar-senha" style="color: #ffffffa6; font-weight: 400; font-size: small;">
+          Esqueceu sua senha? </ion-router-link>
+      </ion-text>
+
+      <ion-button (click)="logar()" style="border-radius: 8px;" >Entrar</ion-button>
+    </div>
+  </div>
+  </div>
+
+
 </ion-content>

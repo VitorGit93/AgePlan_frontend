@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./relatorios.page.scss'],
 })
 export class RelatoriosPage implements OnInit {
+  students!: any[];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    fetch('./assets/data/students.json')
+      .then((res) => res.json())
+      .then((json) => {
+        this.students = json;
+      });
   }
-
 }
+
