@@ -20,7 +20,7 @@
     align-items: center;
   ">
     <ion-img src="assets/logo/logoAgePlan.svg" style="position: relative; width: 80px;" />
-    <ion-title style="font-size: 1.9rem; padding: 0; margin: 5px 0 0 0;"> AgePlan </ion-title>
+    <ion-title style="font-size: 1.9rem; padding: 0; margin: 5px 0 0 0; color: #ffffff;"> AgePlan </ion-title>
   </div>
 </ion-header>
 
@@ -139,7 +139,15 @@
           Esqueceu sua senha? </ion-router-link>
       </ion-text>
 
-      <ion-button (click)="logar()" style="border-radius: 8px;" >Entrar</ion-button>
+      <ion-button (click)="logar()" style="border-radius: 8px;
+        --background: linear-gradient(to right, #00bcef, #509fff);
+        width: 296px;
+        height: 48px;
+        color: #fff;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+      " >Entrar</ion-button>
     </div>
   </div>
   </div>

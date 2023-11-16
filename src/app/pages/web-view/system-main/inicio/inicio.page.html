@@ -1,13 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+
+    <ion-button slot="start">
+      Menu
+      <ion-menu-button
+        autoHide="false"
+        menu="menu"
+        color="light"
+        class="ion-activatable ripple-parent"
+        style="margin-left: 0px; margin-right: 0px; --border-radius: 0px; --background: transparent; --color: var(--ion-color-light);">
+      >menu</ion-menu-button>
+    </ion-button>
+
     <ion-title>inicio</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">inicio</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
 </ion-content>
