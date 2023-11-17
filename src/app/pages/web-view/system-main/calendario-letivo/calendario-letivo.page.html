@@ -1,9 +1,52 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true"
+  style="
+    --ion-safe-area-top: 20px;
+    --background: #c21e1e;
+    --ion-background-color: #c21e1e;
+    --color: #fff;">
   <ion-toolbar>
-    <ion-title>calendario-letivo</ion-title>
+    <ion-title>Calendário Letivo</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
- 
+  <div>
+    <ion-searchbar animated="true" placeholder="Procurar" show-clear-button="always"></ion-searchbar>
+  </div>
+
+  <ion-accordion-group>
+    <ion-accordion>
+
+      <ion-item>
+        <ion-label>Calendário Letivo</ion-label>
+        <ion-icon slot="end" name="calendar-outline"></ion-icon>
+      </ion-item>
+
+      <ion-label>Calendário Letivo</ion-label>
+      <ion-item>
+
+
+        <iframe
+          src="https://calendar.google.com/calendar/embed?height=800&wkst=1&bgcolor=%23005c97&ctz=America%2FCampo_Grande&src=Y181bTFqcnF2YXNqOWh1cHU0MXJwOTQyNXF0Y0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=cHQtYnIuY2hyaXN0aWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=cHQtYnIuYnJhemlsaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%2331a35e&color=%234285F4&color=%23F6BF26"
+          style="
+                border: solid 10px #c21e1e;
+                width: 100%;
+                height: 80vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              " frameborder="0" scrolling="no">
+        </iframe>
+      </ion-item>
+
+
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <div style="padding: 10px;">
+
+  </div>
 </ion-content>
