@@ -1,6 +1,6 @@
 <ion-header [translucent]="true" style="border: 2px solid blue; height: 123px;">
   <ion-toolbar style="
-      border: 1px solid violet;
+      
       display: flex;
       justify-content: center;
       align-items: center;
@@ -14,7 +14,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" style="
-    border: 2px solid red;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +23,8 @@
 
 
   <section style="
-      border: 1px solid darkblue;
+      background: inherit;
+      
       display: flex;
       justify-content: center;
       align-items: flex-start;
@@ -32,7 +33,7 @@
 
 
     <ion-accordion-group multiple="true" style="
-      border: 1px solid green;
+      
       display: flex;
       justify-content: center;
       align-items: center;
@@ -41,55 +42,53 @@
 
       <ion-accordion value="visualizar-dashboard"
         style="
-          border: 1px solid red;
+          
+          display: inline-block;
           justify-content: center;
           align-items: center;
           width: 100%;
         "
       >
-        <ion-item slot="header">
+        <ion-item slot="header" style="--background: inherit;">
           <ion-label>Ações comuns</ion-label>
         </ion-item>
 
-        <ion-list style="
-          border: 1px solid blue;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-        ">
-
-          <ion-item style="
-            border: 1px solid violet;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
+        <ion-item slot="content" style="--background: inherit;">
+          <ion-button
+            style="
+              width: 100%; 
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              flex-direction: row;
           ">
-            <ion-label>Visualizar Dashboard</ion-label>
-          </ion-item>
+            <ion-icon name="add-circle-outline" style="padding-right: 6px"></ion-icon>
+            <ion-label>Lançar ocorrência</ion-label>
+          </ion-button>
+        </ion-item>
 
-          <ion-item style="
-            border: 1px solid violet;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
+        <ion-item slot="content" style="--background: inherit;">
+          <ion-button
+            style="
+              width: 100%; 
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              flex-direction: row;
           ">
-            <ion-label>Visualizar Dashboard</ion-label>
-          </ion-item>
+            <ion-icon name="add-outline"></ion-icon>
+            <ion-label>Lançar frequência</ion-label>
+          </ion-button>
+        </ion-item>
 
-          <ion-item style="
-            border: 1px solid violet;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-          ">
-            <ion-label>Visualizar Dashboard</ion-label>
-          </ion-item>
+        
 
-        </ion-list>
+
+
+
+
+
+
 
       </ion-accordion>
 
