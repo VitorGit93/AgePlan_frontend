@@ -1,45 +1,123 @@
 <ion-header [translucent]="true" style="border: 2px solid blue; height: 123px;">
-  <ion-toolbar
-    style="
+  <ion-toolbar style="
       border: 1px solid violet;
       display: flex;
       justify-content: center;
       align-items: center;
       --background: var(--fundo-claro-main);
       color: #000;
-    "
-  >
-    <ion-title style="font-weight: 700; font-size: x-large;">Início</ion-title>
+      height: 100%;
+    ">
+    <ion-title style="font-weight: 700; font-size: x-large; margin-top: 40px;">Início</ion-title>
+    <hr class="solid" style="border-bottom: 2px solid #bbb; padding: 0;">
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true"
-  style="
+<ion-content [fullscreen]="true" style="
     border: 2px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
     --background: var(--fundo-claro-main);
-
-  "
->
-
-<div
-  style="
-    border: 2px solid greenyellow;
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 59px;
-  "
->
+  ">
 
 
+  <section style="
+      border: 1px solid darkblue;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 10px;
+    ">
 
-</div>
+
+    <ion-accordion-group multiple="true" style="
+      border: 1px solid green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    ">
+
+      <ion-accordion value="visualizar-dashboard"
+        style="
+          border: 1px solid red;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+        "
+      >
+        <ion-item slot="header">
+          <ion-label>Ações comuns</ion-label>
+        </ion-item>
+
+        <ion-list style="
+          border: 1px solid blue;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+        ">
+
+          <ion-item style="
+            border: 1px solid violet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          ">
+            <ion-label>Visualizar Dashboard</ion-label>
+          </ion-item>
+
+          <ion-item style="
+            border: 1px solid violet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          ">
+            <ion-label>Visualizar Dashboard</ion-label>
+          </ion-item>
+
+          <ion-item style="
+            border: 1px solid violet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          ">
+            <ion-label>Visualizar Dashboard</ion-label>
+          </ion-item>
+
+        </ion-list>
+
+      </ion-accordion>
+
+    </ion-accordion-group>
+
+    <ion-accordion-group>
+
+      <ion-accordion value="visualizar-dashboard">
+        <ion-item slot="header" color="light">
+          <ion-label>First Accordion</ion-label>
+        </ion-item>
+      </ion-accordion>
+
+
+
+    </ion-accordion-group>
+
+
+
+
+
+
+
+
+  </section>
+
+
+
 
 
 
